@@ -23,17 +23,11 @@ const App = () => {
 
   return (
     <div>
-      <Header title={course} />
-      <Content 
-        part1={part1}
-        exercises1={part1.exercises} 
-        part2={part2} 
-        exercises2={part2.exercises} 
-        part3={part3} 
-        exercises3={part3.exercises}/>
-      <Total total={part1.exercises + part2.exercises + part3.exercises}/>
+      <Header course={course} />
+      <Content parts={parts} />
+      <Total parts={parts} />
     </div>
-  );
+  )
 };
 
 export default App;
