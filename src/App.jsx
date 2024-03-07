@@ -23,11 +23,11 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header title={course.name} />
+      <Content parts={course.parts} />
+      <Total total={course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises}/>
     </div>
-  )
+  );
 };
 
 export default App;
